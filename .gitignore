@@ -1,0 +1,8 @@
+# whitelist: only the shipped patch, the renders and the readme
+/*
+!.gitignore
+!README.md
+!patch-ruRU-Z.MPQ
+!docs/
+docs/*
+!docs/img/
