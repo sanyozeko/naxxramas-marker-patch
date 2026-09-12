@@ -44,6 +44,8 @@ colour, so you can see which of them you are standing inside.
 | **Maexxna** | Web Wrap cocoons rendered 6× larger, so a wrapped player is easy to spot |
 | **Shadow Fissure** | the flat spinning rune replaced with a vertical pillar, visible from across the room |
 
+The patch also dims two effect textures that flash far brighter than they need to (`SHOCKWAVE1BLUE`, `MOGURUNEWHITE2`) — housekeeping rather than markers.
+
 ## Install
 
 1. **Install [Patch-Y by Andre](https://www.curseforge.com/wow/addons) first** (`Patch-ruru-y.mpq`)
