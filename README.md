@@ -31,8 +31,8 @@ colour, so you can see which of them you are standing inside.
 |---|---|---|---|
 | Baron Rivendare | 28834 | blue | 55 yd |
 | Thane Korth'azz | 28832 | red | 55 yd |
-| Lady Blaumeux | 28833 | black | 45 yd |
-| Sir Zeliek | 28835 | cyan | 45 yd |
+| Lady Blaumeux | 28833 | dark blue | 47 yd |
+| Sir Zeliek | 28835 | cyan | 47 yd |
 
 ### Other markers
 
@@ -44,13 +44,20 @@ colour, so you can see which of them you are standing inside.
 | **Maexxna** | Web Wrap cocoons rendered 6× larger, so a wrapped player is easy to spot |
 | **Shadow Fissure** | the flat spinning rune replaced with a vertical pillar, visible from across the room |
 
-The patch also dims two effect textures that flash far brighter than they need to (`SHOCKWAVE1BLUE`, `MOGURUNEWHITE2`) — housekeeping rather than markers.
+The patch replaces no existing file — not Blizzard's and not Patch-Y's. Every model and texture
+it ships has a name of its own, so nothing outside these markers changes.
+
+Two side effects no client patch can avoid, because the server only tells the client which
+display to draw and these displays are shared:
+
+- the Rivendare circle also shows under Baron Rivendare in Stratholme (same display, 10729);
+- the ×6 cocoon also applies to seven other web-wrapped creatures outside Naxxramas (display 16213).
 
 ## Install
 
 1. **Install [Patch-Y by Andre](https://www.curseforge.com/wow/addons) first** (`Patch-ruru-y.mpq`)
-   — this patch is built on top of it and reuses several of his models. Without it some markers
-   will fail to load their models.
+   — this patch's DBC tables are built on top of his, so it has to load after Patch-Y. Without
+   Patch-Y, his table edits would be switched on without the models they point to.
 2. Copy `patch-ruRU-Z.MPQ` into `<WoW>\Data\ruRU\`.
 3. Restart the client.
 
@@ -73,7 +80,8 @@ repointed, so no other creature or spell in the game is affected. All four LOD s
 
 ## Credits
 
-Built on top of **Patch-Y by Andre**, whose models several markers reuse.
+Built on top of **Patch-Y by Andre**: the DBC tables start from his, and the Thaddius, Sapphiron
+and Faerlina circles are derived from his `Range_Circle` model.
 
 Game assets are property of Blizzard Entertainment. This patch contains modifications of client
 data for use on private servers and is not affiliated with or endorsed by Blizzard.
